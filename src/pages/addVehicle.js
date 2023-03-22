@@ -13,7 +13,7 @@ const addVehicle = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="h-screen bg-white">
+            <div className="max-h-screen bg-white">
                 <Navbar />
                 <div className="px-5">
                     <div className="flex items-center justify-end mt-4 mb-8">
