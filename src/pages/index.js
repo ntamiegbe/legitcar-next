@@ -30,20 +30,20 @@ export default function Home() {
         <div className="bg-grayBg min-h-screen pt-10 pb-20 flex-1">
           <div className="max-w-5xl bg-white m-5 md:mx-10 lg:mx-auto border border-dashboardBorders rounded-lg opacity-[90%]">
             <div className="flex flex-col">
-              <div className="flex items-center justify-start">
+              <div className="flex items-center justify-start border-b w-full">
                 <button
-                  className={`text-secondaryText pt-5 border-gray-200 text-start px-5 w-full border-b pb-3 text-md font-normal ${activeTab === "tab1"
+                  className={`pt-5 text-start px-5 w-full md:w-auto pb-3 text-md font-normal ${activeTab === "tab1"
                     ? "border-b border-brand text-brand font-semibold"
-                    : ""
+                    : "text-secondaryText"
                     }`}
                   onClick={() => handleTabClick("tab1")}
                 >
                   Basic Information
                 </button>
                 <button
-                  className={`text-secondaryText pt-5 border-gray-200 text-start px-5 w-full border-b pb-3 text-md font-normal ${activeTab === "tab2"
+                  className={`pt-5 text-start px-5 w-full md:w-auto pb-3 text-md font-normal ${activeTab === "tab2"
                     ? "border-b border-brand text-brand font-semibold"
-                    : ""
+                    : "text-secondaryText"
                     }`}
                   onClick={() => handleTabClick("tab2")}
                 >
@@ -90,15 +90,15 @@ export default function Home() {
                       className="appearance-none border border-stroke rounded-lg w-full p-4 text-base text-primary focus:outline-none"
                       id="phone_number" type="text" placeholder="Enter your phone number" />
                   </div>
-                  <button className='my-4 bg-brand py-4 px-6 rounded-lg text-white text-base lg:col-span-2'>Save changes</button>
                 </form>
+                <button className='my-4 bg-brand py-4 px-6 rounded-lg text-white text-base'>Save changes</button>
               </div>
 
               <div id="tab2" className={`px-5 py-10 ${activeTab === "tab2" ? "" : "hidden"}`}>
                 <h2 className='text-icons text-sm mb-8'>SECURITY</h2>
                 <h3 className='text-primary text-base my-2 font-medium'>Update Password</h3>
                 <p className='text-sm text-secondaryText mb-8'>Change your old password to a new one</p>
-                <form className="bg-white py-6">
+                <form className="bg-white py-6 grid grid-cols-1 gap-4 lg:grid-cols-2 lg:gap-8">
                   <div className="mb-7">
                     <label className="block text-primary text-sm font-medium mb-1" for="first_name">
                       Old passowrd
@@ -115,8 +115,8 @@ export default function Home() {
                       className="appearance-none border border-stroke rounded-lg w-full p-4 text-base text-primary focus:outline-none"
                       id="last_name" type="password" placeholder="Enter password" />
                   </div>
-                  <button className='my-4 bg-brand py-4 px-6 rounded-lg text-white text-base'>Save changes</button>
                 </form>
+                <button className='my-4 bg-brand py-4 px-6 rounded-lg text-white text-base'>Save changes</button>
               </div>
             </div>
           </div>
