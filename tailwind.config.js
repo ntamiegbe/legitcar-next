@@ -35,6 +35,8 @@ module.exports = {
       'grayPagination': '#647691',
       'blue': '#4172C6',
       'blueOverlay': '#EEF4FF',
+      'orangeOverlay': '#FFF6ED',
+      'orangeText': '#C4320A',
       'grayBg': '#F2F4F7',
       'inputFocused': '#F9FAFB',
       'gray': '#344054'

@@ -241,7 +241,33 @@ const maintainance = () => {
                 </div>
                 <div className="mb-8">
                   <h5 className='text-grayTable text-xs mb-2'>Status</h5>
-                  <button className='text-sm text-secondaryText bg-grayBg px-3 py-1 rounded-2xl'>No maintenance</button>
+                  <button className='text-sm text-orangeText bg-orangeOverlay px-3 py-1 rounded-2xl'>No maintenance</button>
+                </div>
+              </div>
+
+              <div className="bg-white border border-stroke rounded-lg m-5 p-10 shadow-main md:hidden">
+                <div className="mb-5 flex items-center space-x-8">
+                  <Image src={HondaLogo} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
+                  <div className="">
+                    <p className='text-primary font-semibold'>Honda</p>
+                    <p className='text-secondaryText font-medium text-sm'>JHLRE4859C401526Z</p>
+                  </div>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Start date</h5>
+                  <p className='text-primary text-sm'>N / A</p>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Completed date</h5>
+                  <p className='text-primary text-sm'>N / A</p>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Plan</h5>
+                  <p className='text-primary text-sm'>6-months Plan</p>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Status</h5>
+                  <button className='text-sm text-blue bg-blueOverlay px-3 py-1 rounded-2xl'>No maintenance</button>
                 </div>
               </div>
 
