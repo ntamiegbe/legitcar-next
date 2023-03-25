@@ -61,8 +61,8 @@ const login = () => {
                 </nav>
                 <div className="m-10 max-w-3xl md:mx-auto">
                     <h1 className='text-3xl text-primary font-medium'>Sign in</h1>
-                    <div className="flex items-center space-x-7 my-8">
-                        <button className='bg-white py-4 px-11 border border-stroke rounded-lg text-gray text-base font-medium'>
+                    <div className="flex items-center space-x-5 my-8">
+                        <button className='bg-white py-4 px-8 border border-stroke rounded-lg text-gray text-base font-medium'>
                             <div className="flex items-center space-x-3">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_3744_84874)">
@@ -80,7 +80,7 @@ const login = () => {
                                 <p>Google</p>
                             </div>
                         </button>
-                        <button className='bg-white py-4 px-11 border border-stroke rounded-lg text-gray text-base font-medium'>
+                        <button className='bg-white py-4 px-8 border border-stroke rounded-lg text-gray text-base font-medium'>
                             <div className="flex items-center space-x-3">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_3744_84881)">
