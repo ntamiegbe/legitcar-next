@@ -5,6 +5,7 @@ import Footer from '@/components/Footer'
 import Sidebar from '@/components/Sidebar';
 
 const vehicles = () => {
+
     return (
         <>
             <Head>
@@ -16,13 +17,13 @@ const vehicles = () => {
 
             <div className="flex justify-between">
                 <Sidebar />
-                <div className="flex-1">
+                <div className="flex-1 min-h-screen bg-grayBg">
                     <Navbar page={"My vehicles"} />
-                    <div className="min-h-screen bg-grayBg p-5">
+                    <div className="p-5">
                         <div className="flex items-center justify-end mt-4 mb-8">
-                            <Link href="/addVehicle" className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Add a vehicle</Link>
+                            <Link href="/addVehicle"className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Add a vehicle</Link>
                         </div>
-                        <div className="max-w-5xl md:mx-auto bg-white border border-dashboardBorders rounded-lg opacity-[90%]">
+                        <div className="max-w-5xl md:mx-auto bg-white border border-dashboardBorders rounded-lg opacity-[90%] mb-20">
                             <div className="md:flex items-center justify-between w-full md:border-b border-stroke">
                                 <div className="text-secondaryText md:text-primary pt-5 border-stroke text-start px-5 w-full border-b md:border-none pb-3 text-base font-normal">
                                     My vehicles

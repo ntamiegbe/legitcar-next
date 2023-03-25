@@ -38,8 +38,8 @@ const addVehicle = () => {
                             </div>
 
                             <div className="flex flex-col items-center justify-center space-y-10">
-                                <h2 className='text-primary text-xl font-medium'>Add a vehicle</h2>
-                                <p className='text-primary text-sm font-normal'>To add a vehicle, enter the VIN or chasis number below</p>
+                                <h2 className='text-primary text-xl font-medium text-center'>Add a vehicle</h2>
+                                <p className='text-primary text-sm font-normal text-center px-14'>To add a vehicle, enter the VIN or chasis number below</p>
                             </div>
                             <div className="mt-14 md:max-w-[468px] mx-auto">
                                 <h1 className='text-start mb-3 text-[#1D2939] font-medium'>VIN / Chasis number</h1>

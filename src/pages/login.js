@@ -54,8 +54,8 @@ const login = () => {
                             <p className='font-bold text-xl text-[#8E44AD]'>r</p>
                         </div>
                         <div className="flex items-center space-x-6">
-                            <p className='text-brand text-base font-medium md:hidden'>Create account</p>
-                            <p className='text-secondaryText text-base font-medium hidden md:inline-flex'>No LegitCar account? <span className='text-brand ml-1'> Create one</span></p>
+                            <a href='/signUp' className='text-brand text-base font-medium md:hidden'>Create account</a>
+                            <p className='text-secondaryText text-base font-medium hidden md:inline-flex'>No LegitCar account? <a href='/signUp' className='text-brand ml-1'> Create one</a></p>
                         </div>
                     </div>
                 </nav>

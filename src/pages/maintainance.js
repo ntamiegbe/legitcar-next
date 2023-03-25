@@ -18,14 +18,14 @@ const maintainance = () => {
 
       <div className="flex justify-between">
         <Sidebar />
-        <div className="flex-1">
+        <div className="flex-1 min-h-screen bg-grayBg">
           <Navbar page={"Maintainance"} />
-          <div className="min-h-screen bg-grayBg p-5">
+          <div className="p-5">
             <div className="flex items-center justify-center md:justify-end mt-4 mb-8 space-x-5">
               <Link href="/addVehicle" className='bg-white border border-stroke py-4 px-6 rounded-lg text-secondaryText text-base cursor-pointer'>Add a vehicle</Link>
-              <Link href="/addVehicle" className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Book Service</Link>
+              <Link href="/services" className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Book Service</Link>
             </div>
-            <div className="max-w-5xl md:mx-auto bg-white border border-dashboardBorders rounded-lg opacity-[90%]">
+            <div className="max-w-5xl md:mx-auto bg-white border border-dashboardBorders rounded-lg opacity-[90%] mb-20">
 
               <table className='w-full hidden md:table pb-14'>
                 <thead>
@@ -200,6 +200,48 @@ const maintainance = () => {
                     <p className='text-primary font-semibold'>Honda</p>
                     <p className='text-secondaryText font-medium text-sm'>JHLRE4859C401526Z</p>
                   </div>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Start date</h5>
+                  <p className='text-primary text-sm'>N / A</p>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Completed date</h5>
+                  <p className='text-primary text-sm'>N / A</p>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Plan</h5>
+                  <p className='text-primary text-sm'>6-months Plan</p>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Status</h5>
+                  <button className='text-sm text-secondaryText bg-grayBg px-3 py-1 rounded-2xl'>No maintenance</button>
+                </div>
+              </div>
+              
+              <div className="bg-white border border-stroke rounded-lg m-5 p-10 shadow-main md:hidden">
+                <div className="mb-5 flex items-center space-x-8">
+                  <Image src={HondaLogo} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
+                  <div className="">
+                    <p className='text-primary font-semibold'>Honda</p>
+                    <p className='text-secondaryText font-medium text-sm'>JHLRE4859C401526Z</p>
+                  </div>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Start date</h5>
+                  <p className='text-primary text-sm'>N / A</p>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Completed date</h5>
+                  <p className='text-primary text-sm'>N / A</p>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Plan</h5>
+                  <p className='text-primary text-sm'>6-months Plan</p>
+                </div>
+                <div className="mb-8">
+                  <h5 className='text-grayTable text-xs mb-2'>Status</h5>
+                  <button className='text-sm text-secondaryText bg-grayBg px-3 py-1 rounded-2xl'>No maintenance</button>
                 </div>
               </div>
 

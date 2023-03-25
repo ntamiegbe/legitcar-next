@@ -25,9 +25,9 @@ export default function Home() {
 
       <div className="flex justify-between">
         <Sidebar />
-        <div className="flex-1">
+        <div className="flex-1 min-h-screen bg-grayBg">
           <Navbar page={"Profile"} />
-          <div className="bg-grayBg min-h-screen pt-10 pb-20">
+          <div className="pt-10 pb-20">
             <div className="max-w-5xl bg-white m-5 md:mx-10 lg:mx-auto border border-dashboardBorders rounded-lg opacity-[90%]">
               <div className="flex flex-col">
                 <div className="flex items-center justify-start border-b w-full">
