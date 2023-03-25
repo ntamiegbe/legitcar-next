@@ -61,9 +61,9 @@ const login = () => {
                 </nav>
                 <div className="m-10 max-w-3xl md:mx-auto">
                     <h1 className='text-3xl text-primary font-medium'>Sign in</h1>
-                    <div className="flex justify-center items-center space-x-7 my-8">
+                    <div className="flex items-center space-x-7 my-8">
                         <button className='bg-white py-4 px-11 border border-stroke rounded-lg text-gray text-base font-medium'>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-3">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_3744_84874)">
                                         <path d="M23.7663 12.2763C23.7663 11.4605 23.7001 10.6404 23.559 9.83789H12.2402V14.4589H18.722C18.453 15.9492 17.5888 17.2676 16.3233 18.1054V21.1037H20.1903C22.4611 19.0137 23.7663 15.9272 23.7663 12.2763Z" fill="#4285F4" />
@@ -81,7 +81,7 @@ const login = () => {
                             </div>
                         </button>
                         <button className='bg-white py-4 px-11 border border-stroke rounded-lg text-gray text-base font-medium'>
-                            <div className="flex items-center space-x-4">
+                            <div className="flex items-center space-x-3">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <g clip-path="url(#clip0_3744_84881)">
                                         <path d="M24 12C24 5.37258 18.6274 0 12 0C5.37258 0 0 5.37258 0 12C0 17.9895 4.3882 22.954 10.125 23.8542V15.4688H7.07812V12H10.125V9.35625C10.125 6.34875 11.9166 4.6875 14.6576 4.6875C15.9701 4.6875 17.3438 4.92188 17.3438 4.92188V7.875H15.8306C14.34 7.875 13.875 8.80008 13.875 9.75V12H17.2031L16.6711 15.4688H13.875V23.8542C19.6118 22.954 24 17.9895 24 12Z" fill="#1877F2" />
