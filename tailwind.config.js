@@ -37,6 +37,7 @@ module.exports = {
       'blueOverlay': '#EEF4FF',
       'grayBg': '#F2F4F7',
       'inputFocused': '#F9FAFB',
+      'gray': '#344054'
     },
   },
   plugins: [],

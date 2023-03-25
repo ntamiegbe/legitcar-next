@@ -14,241 +14,242 @@ const vehicles = () => {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Navbar />
             <div className="flex justify-between">
-
                 <Sidebar />
-                <div className="min-h-screen bg-grayBg p-5 flex-1">
-                    <div className="flex items-center justify-end mt-4 mb-8">
-                        <Link href="/addVehicle" className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Add a vehicle</Link>
-                    </div>
-                    <div className="max-w-5xl md:mx-auto bg-white border border-dashboardBorders rounded-lg opacity-[90%]">
-                        <div className="md:flex items-center justify-between w-full md:border-b border-stroke">
-                            <div className="text-secondaryText md:text-primary pt-5 border-stroke text-start px-5 w-full border-b md:border-none pb-3 text-base font-normal">
-                                My vehicles
-                            </div>
-                            <div className="bg-white border border-stroke py-2 rounded-lg m-5 flex items space-x-4 px-5">
-                                <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <g clip-path="url(#clip0_3613_84128)">
-                                        <path d="M9.11449 18.2666C11.3413 18.2666 13.446 17.4729 15.1063 16.0202L18.937 19.7833C19.0587 19.9028 19.2169 19.9624 19.375 19.9624C19.5368 19.9624 19.6985 19.9 19.8209 19.7754C20.0627 19.5292 20.0593 19.1335 19.813 18.8916L15.9898 15.1358C17.438 13.4767 18.229 11.3753 18.229 9.15209C18.229 6.71752 17.2809 4.42869 15.5594 2.70717C13.8379 0.985684 11.5491 0.0375977 9.11449 0.0375977C6.67996 0.0375977 4.39109 0.985684 2.66961 2.70717C0.948086 4.42869 0 6.71752 0 9.15209C0 11.5867 0.948086 13.8755 2.66961 15.597C4.39109 17.3185 6.67996 18.2666 9.11449 18.2666ZM3.55348 3.59104C5.08668 2.05783 7.10062 1.29127 9.11449 1.29127C11.1284 1.29127 13.1423 2.05787 14.6755 3.59104C17.7419 6.6574 17.7419 11.6468 14.6755 14.7131C11.6092 17.7795 6.61992 17.7796 3.55344 14.7131C0.487109 11.6468 0.487109 6.6574 3.55348 3.59104Z" fill="#8593AF" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_3613_84128">
-                                            <rect width="20" height="20" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                                <input type="text" placeholder='Search...' className='w-full outline-none' />
-                            </div>
+                <div className="flex-1">
+                    <Navbar page={"My vehicles"} />
+                    <div className="min-h-screen bg-grayBg p-5">
+                        <div className="flex items-center justify-end mt-4 mb-8">
+                            <Link href="/addVehicle" className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Add a vehicle</Link>
                         </div>
-
-                        <table className='w-full hidden md:table pb-14'>
-                            <thead>
-                                <tr className="bg-grayBg">
-                                    <th className="px-6 py-3 text-start text-grayTable text-xs font-medium">VIN / Chasis number</th>
-                                    <th className="px-6 py-3 text-start text-grayTable text-xs font-medium">Model</th>
-                                    <th className="px-6 py-3 text-start text-grayTable text-xs font-medium">Date created</th>
-                                </tr>
-                            </thead>
-                            <tbody className="bg-white divide-y divide-dashboardBorders">
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        5TDZK23C78S210350
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        TOYOTA Camry 2009 
-                                    </td>
-                                    <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
-                                        Fri 30th May, 2022 05:31PM
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-
-                        <div className="md:hidden">
-                            <div className="bg-white border border-stroke rounded-lg m-5 p-10 shadow-main">
-                                <div className="mb-8">
-                                    <h5 className='text-grayTable text-xs mb-2'>VIN / Chasis number</h5>
-                                    <p className='text-secondary text-sm'>5TDZK23C78S210350</p>
+                        <div className="max-w-5xl md:mx-auto bg-white border border-dashboardBorders rounded-lg opacity-[90%]">
+                            <div className="md:flex items-center justify-between w-full md:border-b border-stroke">
+                                <div className="text-secondaryText md:text-primary pt-5 border-stroke text-start px-5 w-full border-b md:border-none pb-3 text-base font-normal">
+                                    My vehicles
                                 </div>
-                                <div className="mb-8">
-                                    <h5 className='text-grayTable text-xs mb-2'>Model</h5>
-                                    <p className='text-secondary text-sm'>TOYOTA Camry 2009 </p>
-                                </div>
-                                <div className="">
-                                    <h5 className='text-grayTable text-xs mb-2'>Date created</h5>
-                                    <p className='text-secondary text-sm'>Fri 30th May, 2022 05:31PM</p>
+                                <div className="bg-white border border-stroke py-2 rounded-lg m-5 flex items space-x-4 px-5">
+                                    <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_3613_84128)">
+                                            <path d="M9.11449 18.2666C11.3413 18.2666 13.446 17.4729 15.1063 16.0202L18.937 19.7833C19.0587 19.9028 19.2169 19.9624 19.375 19.9624C19.5368 19.9624 19.6985 19.9 19.8209 19.7754C20.0627 19.5292 20.0593 19.1335 19.813 18.8916L15.9898 15.1358C17.438 13.4767 18.229 11.3753 18.229 9.15209C18.229 6.71752 17.2809 4.42869 15.5594 2.70717C13.8379 0.985684 11.5491 0.0375977 9.11449 0.0375977C6.67996 0.0375977 4.39109 0.985684 2.66961 2.70717C0.948086 4.42869 0 6.71752 0 9.15209C0 11.5867 0.948086 13.8755 2.66961 15.597C4.39109 17.3185 6.67996 18.2666 9.11449 18.2666ZM3.55348 3.59104C5.08668 2.05783 7.10062 1.29127 9.11449 1.29127C11.1284 1.29127 13.1423 2.05787 14.6755 3.59104C17.7419 6.6574 17.7419 11.6468 14.6755 14.7131C11.6092 17.7795 6.61992 17.7796 3.55344 14.7131C0.487109 11.6468 0.487109 6.6574 3.55348 3.59104Z" fill="#8593AF" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_3613_84128">
+                                                <rect width="20" height="20" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <input type="text" placeholder='Search...' className='w-full outline-none' />
                                 </div>
                             </div>
-                            <div className="bg-white border border-stroke rounded-lg m-5 p-10 shadow-main">
-                                <div className="mb-8">
-                                    <h5 className='text-grayTable text-xs mb-2'>VIN / Chasis number</h5>
-                                    <p className='text-secondary text-sm'>5TDZK23C78S210350</p>
+
+                            <table className='w-full hidden md:table pb-14'>
+                                <thead>
+                                    <tr className="bg-grayBg">
+                                        <th className="px-6 py-3 text-start text-grayTable text-xs font-medium">VIN / Chasis number</th>
+                                        <th className="px-6 py-3 text-start text-grayTable text-xs font-medium">Model</th>
+                                        <th className="px-6 py-3 text-start text-grayTable text-xs font-medium">Date created</th>
+                                    </tr>
+                                </thead>
+                                <tbody className="bg-white divide-y divide-dashboardBorders">
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            5TDZK23C78S210350
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            TOYOTA Camry 2009
+                                        </td>
+                                        <td className="px-6 py-4 whitespace-nowrap text-primary text-sm">
+                                            Fri 30th May, 2022 05:31PM
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <div className="md:hidden">
+                                <div className="bg-white border border-stroke rounded-lg m-5 p-10 shadow-main">
+                                    <div className="mb-8">
+                                        <h5 className='text-grayTable text-xs mb-2'>VIN / Chasis number</h5>
+                                        <p className='text-secondary text-sm'>5TDZK23C78S210350</p>
+                                    </div>
+                                    <div className="mb-8">
+                                        <h5 className='text-grayTable text-xs mb-2'>Model</h5>
+                                        <p className='text-secondary text-sm'>TOYOTA Camry 2009 </p>
+                                    </div>
+                                    <div className="">
+                                        <h5 className='text-grayTable text-xs mb-2'>Date created</h5>
+                                        <p className='text-secondary text-sm'>Fri 30th May, 2022 05:31PM</p>
+                                    </div>
                                 </div>
-                                <div className="mb-8">
-                                    <h5 className='text-grayTable text-xs mb-2'>Model</h5>
-                                    <p className='text-secondary text-sm'>TOYOTA Camry 2009 </p>
+                                <div className="bg-white border border-stroke rounded-lg m-5 p-10 shadow-main">
+                                    <div className="mb-8">
+                                        <h5 className='text-grayTable text-xs mb-2'>VIN / Chasis number</h5>
+                                        <p className='text-secondary text-sm'>5TDZK23C78S210350</p>
+                                    </div>
+                                    <div className="mb-8">
+                                        <h5 className='text-grayTable text-xs mb-2'>Model</h5>
+                                        <p className='text-secondary text-sm'>TOYOTA Camry 2009 </p>
+                                    </div>
+                                    <div className="">
+                                        <h5 className='text-grayTable text-xs mb-2'>Date created</h5>
+                                        <p className='text-secondary text-sm'>Fri 30th May, 2022 05:31PM</p>
+                                    </div>
                                 </div>
-                                <div className="">
-                                    <h5 className='text-grayTable text-xs mb-2'>Date created</h5>
-                                    <p className='text-secondary text-sm'>Fri 30th May, 2022 05:31PM</p>
-                                </div>
-                            </div>
-                            <div className="bg-white border border-stroke rounded-lg mx-5 mb-20 p-10 shadow-main">
-                                <div className="mb-8">
-                                    <h5 className='text-grayTable text-xs mb-2'>VIN / Chasis number</h5>
-                                    <p className='text-secondary text-sm'>5TDZK23C78S210350</p>
-                                </div>
-                                <div className="mb-8">
-                                    <h5 className='text-grayTable text-xs mb-2'>Model</h5>
-                                    <p className='text-secondary text-sm'>TOYOTA Camry 2009 </p>
-                                </div>
-                                <div className="">
-                                    <h5 className='text-grayTable text-xs mb-2'>Date created</h5>
-                                    <p className='text-secondary text-sm'>Fri 30th May, 2022 05:31PM</p>
+                                <div className="bg-white border border-stroke rounded-lg mx-5 mb-20 p-10 shadow-main">
+                                    <div className="mb-8">
+                                        <h5 className='text-grayTable text-xs mb-2'>VIN / Chasis number</h5>
+                                        <p className='text-secondary text-sm'>5TDZK23C78S210350</p>
+                                    </div>
+                                    <div className="mb-8">
+                                        <h5 className='text-grayTable text-xs mb-2'>Model</h5>
+                                        <p className='text-secondary text-sm'>TOYOTA Camry 2009 </p>
+                                    </div>
+                                    <div className="">
+                                        <h5 className='text-grayTable text-xs mb-2'>Date created</h5>
+                                        <p className='text-secondary text-sm'>Fri 30th May, 2022 05:31PM</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>

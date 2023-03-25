@@ -2,11 +2,11 @@ import { BiChevronDown } from 'react-icons/bi'
 import Logo from '../assets/person.png'
 import Image from 'next/image'
 
-const Navbar = () => {
+const Navbar = ({page}) => {
     return (
         <nav className='w-full bg-white border-b border-dashboardBorders'>
             <div className="flex justify-between items-center p-5">
-                <h2 className='text-primary text-lg font-medium'>Profile</h2>
+                <h2 className='text-primary text-lg font-medium'>{page}</h2>
                 <div className="flex items-center space-x-6">
                     <p className='hidden md:inline-flex text-secondaryText text-base font-normal'>Verify</p>
                     <p className='hidden md:inline-flex text-secondaryText text-base font-normal'>Report missing vehicle</p>
