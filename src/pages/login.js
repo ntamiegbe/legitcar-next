@@ -62,7 +62,7 @@ const login = () => {
                 <div className="m-10 max-w-3xl md:mx-auto">
                     <h1 className='text-3xl text-primary font-medium'>Sign in</h1>
                     <div className="flex justify-center items-center">
-                        <div className="flex items-center space-x-8 mt-8">
+                        <div className="flex items-center space-x-8 m-10">
                             <button className='bg-white py-4 px-11 border border-stroke rounded-lg text-gray text-base font-medium'>
                                 <div className="flex items-center space-x-4">
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
