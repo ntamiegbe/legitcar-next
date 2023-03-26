@@ -5,8 +5,41 @@ import Footer from '@/components/Footer'
 import Sidebar from '@/components/Sidebar';
 import HondaLogo from '../assets/Honda.png'
 import Image from 'next/image';
+import { useState } from 'react';
+import Modal from '@/components/Modal';
 
 const maintainance = () => {
+
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true)
+  }
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false)
+  }
+
+  const services = [
+    { id: 1, name: 'Oil change' },
+    { id: 2, name: 'Car wash' },
+    { id: 3, name: 'Tyre puncture & alignment' },
+    { id: 4, name: 'Battery replacement' },
+    { id: 5, name: 'Cooling fan repair' },
+    { id: 6, name: 'Other' }
+  ]
+
+  const [selectedServices, setSelectedServices] = useState([])
+
+  function handleServiceClick(serviceId) {
+    const isSelected = selectedServices.includes(serviceId)
+    if (isSelected) {
+      setSelectedServices(selectedServices.filter(id => id !== serviceId))
+    } else {
+      setSelectedServices([...selectedServices, serviceId])
+    }
+  }
+
   return (
     <>
       <Head>
@@ -23,7 +56,38 @@ const maintainance = () => {
           <div className="p-5">
             <div className="flex items-center justify-center md:justify-end mt-4 mb-8 space-x-5">
               <Link href="/addVehicle" className='bg-white border border-stroke py-4 px-6 rounded-lg text-secondaryText text-base cursor-pointer'>Add a vehicle</Link>
-              <Link href="/services" className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Book Service</Link>
+              <button onClick={handleOpenModal} className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Book Service</button>
+              <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+                <div className="flex flex-col items-center justify-center space-y-10">
+                  <h2 className='text-primary text-xl font-medium'>What service(s) do you want to book?</h2>
+                  <p className='text-primary text-sm font-normal text-center px-14'>Choose the maintenance service(s) you want from below. Select as many as your vehicle requires.</p>
+                </div>
+                <div className="py-14 md:max-w-[468px] mx-auto">
+                  <div className="flex flex-wrap gap-4 mb-8 mx-8">
+                    {services.map(service => (
+                      <div
+                        key={service.id}
+                        className={`py-2 px-4 rounded-lg border font-normal ${selectedServices.includes(service.id) ? 'bg-overlay text-brand border-brand' : 'bg-white text-primary border-stroke'
+                          }`}
+                        onClick={() => handleServiceClick(service.id)}
+                      >
+                        <div className="flex items-center space-x-2">
+                          {selectedServices.includes(service.id) && (
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7422 3.76606C14.0221 4.01101 14.0475 4.43773 13.7985 4.71409L6.78928 12.4939C6.53898 12.7717 6.10923 12.7894 5.83699 12.5331L1.78097 8.71475C1.52802 8.47661 1.50381 8.07981 1.72083 7.80855C1.96029 7.50921 2.40623 7.46801 2.69123 7.72435L5.83815 10.5549C6.11163 10.8009 6.53268 10.7789 6.77907 10.5058L12.8081 3.82121C13.052 3.5507 13.4681 3.52618 13.7422 3.76606Z" fill="#8E44AD" />
+                            </svg>
+
+                          )}
+                          <p>{service.name}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="flex items-center justify-center mt-10">
+                    <Link className='bg-[#8E44AD] px-14 py-3 rounded-lg w-auto text-white font-medium' href="/kudos">Submit</Link>
+                  </div>
+                </div>
+              </Modal>
             </div>
             <div className="max-w-5xl md:mx-auto bg-white border border-dashboardBorders rounded-lg opacity-[90%] mb-20">
 
@@ -218,7 +282,7 @@ const maintainance = () => {
                   <button className='text-sm text-secondaryText bg-grayBg px-3 py-1 rounded-2xl'>No maintenance</button>
                 </div>
               </div>
-              
+
               <div className="bg-white border border-stroke rounded-lg m-5 p-10 shadow-main md:hidden">
                 <div className="mb-5 flex items-center space-x-8">
                   <Image src={HondaLogo} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
@@ -241,7 +305,7 @@ const maintainance = () => {
                 </div>
                 <div className="mb-8">
                   <h5 className='text-grayTable text-xs mb-2'>Status</h5>
-                  <button className='text-sm text-orangeText bg-orangeOverlay px-3 py-1 rounded-2xl'>No maintenance</button>
+                  <button className='text-sm text-orangeText bg-orangeOverlay px-3 py-1 rounded-2xl'>Awaiting drop-off</button>
                 </div>
               </div>
 
@@ -267,7 +331,7 @@ const maintainance = () => {
                 </div>
                 <div className="mb-8">
                   <h5 className='text-grayTable text-xs mb-2'>Status</h5>
-                  <button className='text-sm text-blue bg-blueOverlay px-3 py-1 rounded-2xl'>No maintenance</button>
+                  <button className='text-sm text-blue bg-blueOverlay px-3 py-1 rounded-2xl'>Vehicle delivered to owner</button>
                 </div>
               </div>
 
