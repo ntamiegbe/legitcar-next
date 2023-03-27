@@ -340,7 +340,7 @@ const maintainance = () => {
                   <h5 className='text-grayTable text-xs mb-2'>Status</h5>
                   <button className='text-sm text-secondaryText bg-grayBg px-3 py-1 rounded-2xl'>No maintenance</button>
                 </div>
-                {isCarDetailsOpen && (
+                {/* {isCarDetailsOpen && (
                   <>
                     <div className="border-t border-stroke md:hidden p-7">
                       <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
@@ -407,7 +407,7 @@ const maintainance = () => {
                       </div>
                     </div>
                   </>
-                )}
+                )} */}
 
               </div>
             </div>
