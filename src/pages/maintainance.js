@@ -342,9 +342,9 @@ const maintainance = () => {
                 </div>
                 {isCarDetailsOpen && (
                   <>
-                    {/* <div className="border-t border-stroke md:hidden p-7">
+                    <div className="border-t border-stroke md:hidden p-7">
                       <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
-                      <div className="flex justify-between items-start space-x-4">
+                      <div className="flex justify-between items-start">
                         <div className="bg-orangeOverlay rounded-full px-5 py-4 flex items-center justify-center">
                           <p className='text-orange text-center font-semibold text-4xl'>M</p>
                         </div>
@@ -362,7 +362,7 @@ const maintainance = () => {
                             </svg>
                             <p className='text-secondaryText text-xs font-normal'>2, Agbaoku Street, Opebi, Ikeja, Lagos, Nigeria Lagos, 100242, Ikeja</p>
                           </div>
-                          <div className="flex items-center space-x-4 mb-4">
+                          <div className="flex items-center space-x-3 mb-4">
                             <div className="border border-stroke py-4 px-6 rounded-lg cursor-pointer">
                               <FaGlobeAfrica className='text-brand ' />
                             </div>
@@ -375,7 +375,7 @@ const maintainance = () => {
                           </div>
                         </div>
                       </div>
-                    </div> */}
+                    </div>
 
                     <div className="border-t border-stroke md:hidden p-7">
                       <div className="flex items-center space-x-2 text-xs mb-6">
