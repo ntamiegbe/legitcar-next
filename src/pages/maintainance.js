@@ -344,8 +344,8 @@ const maintainance = () => {
                   <>
                     <div className="border-t border-stroke md:hidden p-7">
                       <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
-                      <div className="flex justify-between space-x-4">
-                        <div className="bg-orangeOverlay rounded-full w-20 h-20 flex items-center justify-center">
+                      <div className="flex justify-between items-start space-x-4">
+                        <div className="bg-orangeOverlay rounded-full px-5 py-4 flex items-center justify-center">
                           <p className='text-orange text-center font-semibold text-4xl'>M</p>
                         </div>
                         <div className="px-5">
