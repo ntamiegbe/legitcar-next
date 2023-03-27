@@ -297,7 +297,7 @@ const maintainance = () => {
               </table>
 
               <div className="bg-white border border-stroke rounded-lg m-5 shadow-main md:hidden">
-                <div className="mb-5 flex items-center space-x-3 p-10">
+                <div className="mb-5 flex items-center space-x-4 p-7">
                   <Image src={HondaLogo} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
                   <div className="">
                     <p className='text-primary font-semibold'>Honda</p>
