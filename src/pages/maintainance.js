@@ -342,7 +342,7 @@ const maintainance = () => {
                 </div>
                 {isCarDetailsOpen && (
                   <>
-                    <div className="border-t border-stroke md:hidden p-7">
+                    {/* <div className="border-t border-stroke md:hidden p-7">
                       <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
                       <div className="flex justify-between items-start space-x-4">
                         <div className="bg-orangeOverlay rounded-full px-5 py-4 flex items-center justify-center">
@@ -375,7 +375,7 @@ const maintainance = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="border-t border-stroke md:hidden p-7">
                       <div className="flex items-center space-x-2 text-xs mb-6">
@@ -385,7 +385,7 @@ const maintainance = () => {
                       <p className='text-primary text-sm'>Vehicle brake repair, Vehicle engine diagnostic, Oil change, Gearbox repair, Battery replacement, Fuel system</p>
                     </div>
 
-                    {/* <div className="border-t border-stroke md:hidden px-7 py-5">
+                    <div className="border-t border-stroke md:hidden px-7 py-5">
                       <h2 className='text-primary font-semibold text-base mb-4'>Maintenance history</h2>
                       <div className="flex flex-col space-y-5">
                         {steps.map((step) => (
@@ -405,7 +405,7 @@ const maintainance = () => {
                           </div>
                         ))}
                       </div>
-                    </div> */}
+                    </div>
                   </>
                 )}
 
