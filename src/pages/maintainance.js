@@ -345,10 +345,10 @@ const maintainance = () => {
                     <div className="border-t border-stroke md:hidden p-7">
                       <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
                       <div className="flex justify-between items-start">
-                        <div className="bg-orangeOverlay rounded-full px-5 py-4 flex items-center justify-center">
+                        <div className="bg-orangeOverlay rounded-full px-4 py-3 flex items-center justify-center">
                           <p className='text-orange text-center font-semibold text-4xl'>M</p>
                         </div>
-                        <div className="px-5">
+                        <div className="px-4">
                           <p className='text-start text-primary text-base font-normal mb-5'>Monic’s Auto Center</p>
                           <div className="flex items-center space-x-2 mb-4">
                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -363,13 +363,13 @@ const maintainance = () => {
                             <p className='text-secondaryText text-xs font-normal'>2, Agbaoku Street, Opebi, Ikeja, Lagos, Nigeria Lagos, 100242, Ikeja</p>
                           </div>
                           <div className="flex items-center space-x-3 mb-4">
-                            <div className="border border-stroke py-4 px-6 rounded-lg cursor-pointer">
+                            <div className="border border-stroke py-2 px-4 rounded-lg cursor-pointer">
                               <FaGlobeAfrica className='text-brand ' />
                             </div>
-                            <div className="border border-stroke py-4 px-6 rounded-lg cursor-pointer">
+                            <div className="border border-stroke py-2 px-4 rounded-lg cursor-pointer">
                               <MdDirections className='text-brand ' />
                             </div>
-                            <div className="border border-stroke py-4 px-6 rounded-lg cursor-pointer">
+                            <div className="border border-stroke py-2 px-4 rounded-lg cursor-pointer">
                               <BsShareFill className='text-brand ' />
                             </div>
                           </div>
