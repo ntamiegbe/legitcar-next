@@ -303,7 +303,7 @@ const maintainance = () => {
                     <p className='text-primary font-semibold'>Honda</p>
                     <p className='text-secondaryText font-medium text-sm'>JHLRE4859C401526Z</p>
                   </div>
-                  <div className="flex justify-end flex-1">
+                  <div className="flex justify-end flex-1 px-5">
                     {isCarDetailsOpen ? <BiChevronDown className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} /> : <BiChevronUp className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} />}
                   </div>
                 </div>
