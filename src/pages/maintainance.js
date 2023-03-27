@@ -316,7 +316,7 @@ const maintainance = () => {
               <div className="bg-white border border-stroke rounded-lg m-5 shadow-main md:hidden">
                 <div className="mb-5 flex items-center justify-between p-7">
                   <Image src={HondaLogo} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
-                  <div className="">
+                  <div className="px-3">
                     <p className='text-primary font-semibold'>Honda</p>
                     <p className='text-secondaryText font-medium text-sm'>JHLRE4859C401526Z</p>
                   </div>
