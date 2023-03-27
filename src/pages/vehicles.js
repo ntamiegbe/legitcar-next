@@ -8,14 +8,14 @@ import Modal from '@/components/Modal';
 import { AiOutlineQuestionCircle } from 'react-icons/ai'
 
 const vehicles = () => {
-    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [isVehicleModalOpen, setIsVehicleModalOpen] = useState(false)
 
-    const handleOpenModal = () => {
-        setIsModalOpen(true)
+    const handleVehicleOpenModal = () => {
+        setIsVehicleModalOpen(true)
     }
 
-    const handleCloseModal = () => {
-        setIsModalOpen(false)
+    const handleVehicleCloseModal = () => {
+        setIsVehicleModalOpen(false)
     }
 
     return (
@@ -33,23 +33,25 @@ const vehicles = () => {
                     <Navbar page={"My vehicles"} />
                     <div className="p-5">
                         <div className="flex items-center justify-end mt-4 mb-8">
-                            <button onClick={handleOpenModal} className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Add a vehicle</button>
-                            <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-                                <div className="flex flex-col items-center justify-center space-y-10">
-                                    <h2 className='text-primary text-xl font-medium text-center'>Add a vehicle</h2>
-                                    <p className='text-primary text-sm font-normal text-center px-14'>To add a vehicle, enter the VIN or chasis number below</p>
-                                </div>
-                                <div className="mt-14 md:max-w-[468px] mx-auto">
-                                    <h1 className='text-start mb-3 text-[#1D2939] font-medium'>VIN / Chasis number</h1>
-                                    <div className="border border-[#D0D5DD] rounded-[8px] bg-white mb-5">
-                                        <input type="text" className='px-5 py-3 rounded-[8px] focus:border-transparent focus:outline-none' placeholder='Enter 17 digits number' />
+                            <button onClick={handleVehicleOpenModal} className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Add a vehicle</button>
+                            <Modal isOpen={isVehicleModalOpen} onClose={handleVehicleCloseModal}>
+                                <div className="h-screen bg-white">
+                                    <div className="flex flex-col items-center justify-center space-y-10">
+                                        <h2 className='text-primary text-xl font-medium text-center'>Add a vehicle</h2>
+                                        <p className='text-primary text-sm font-normal text-center px-14'>To add a vehicle, enter the VIN or chasis number below</p>
                                     </div>
-                                    <div className="flex items-center justify-center">
-                                        <button className='bg-[#8E44AD] mx-auto px-14 py-3 rounded-lg w-auto text-white font-medium'>Decode VIN</button>
-                                    </div>
-                                    <div className="mt-5 flex items-center justify-center space-x-2 text-[#8E44AD]">
-                                        <AiOutlineQuestionCircle />
-                                        <h1 className='text-lg'>Where to find VIN</h1>
+                                    <div className="mt-14 md:max-w-[468px] mx-auto">
+                                        <h1 className='text-start mb-3 text-[#1D2939] font-medium'>VIN / Chasis number</h1>
+                                        <div className="border border-[#D0D5DD] rounded-[8px] bg-white mb-5">
+                                            <input type="text" className='px-5 py-3 rounded-[8px] focus:border-transparent focus:outline-none' placeholder='Enter 17 digits number' />
+                                        </div>
+                                        <div className="flex items-center justify-center">
+                                            <button className='bg-[#8E44AD] mx-auto px-14 py-3 rounded-lg w-auto text-white font-medium'>Decode VIN</button>
+                                        </div>
+                                        <div className="mt-5 flex items-center justify-center space-x-2 text-[#8E44AD]">
+                                            <AiOutlineQuestionCircle />
+                                            <h1 className='text-lg'>Where to find VIN</h1>
+                                        </div>
                                     </div>
                                 </div>
                             </Modal>

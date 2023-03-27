@@ -7,17 +7,35 @@ import HondaLogo from '../assets/Honda.png'
 import Image from 'next/image';
 import { useState } from 'react';
 import Modal from '@/components/Modal';
+import { AiOutlineQuestionCircle } from 'react-icons/ai'
+import { BiChevronDown, BiChevronUp } from 'react-icons/bi'
 
 const maintainance = () => {
 
-  const [isModalOpen, setIsModalOpen] = useState(false)
+  const [isServicesModalOpen, setIsServicesModalOpen] = useState(false)
+  // Remeber to set the initial state back to false
+  const [isCarDetailsOpen, setCarDetailsOpen] = useState(true)
 
-  const handleOpenModal = () => {
-    setIsModalOpen(true)
+  const handleOpenServicesModal = () => {
+    setIsServicesModalOpen(true)
   }
 
-  const handleCloseModal = () => {
-    setIsModalOpen(false)
+  const handleOpenCarDetailsModal = () => {
+    setCarDetailsOpen(!isCarDetailsOpen)
+  }
+
+  const handleCloseServicesModal = () => {
+    setIsServicesModalOpen(false)
+  }
+
+  const [isVehicleModalOpen, setIsVehicleModalOpen] = useState(false)
+
+  const handleVehicleOpenModal = () => {
+    setIsVehicleModalOpen(true)
+  }
+
+  const handleVehicleCloseModal = () => {
+    setIsVehicleModalOpen(false)
   }
 
   const services = [
@@ -55,11 +73,32 @@ const maintainance = () => {
           <Navbar page={"Maintainance"} />
           <div className="p-5">
             <div className="flex items-center justify-center md:justify-end mt-4 mb-8 space-x-5">
-              <Link href="/addVehicle" className='bg-white border border-stroke py-4 px-6 rounded-lg text-secondaryText text-base cursor-pointer'>Add a vehicle</Link>
-              <button onClick={handleOpenModal} className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Book Service</button>
-              <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
+              <button onClick={handleVehicleOpenModal} className='bg-white border border-stroke py-4 px-6 rounded-lg text-secondaryText text-base cursor-pointer'>Add a vehicle</button>
+              <Modal isOpen={isVehicleModalOpen} onClose={handleVehicleCloseModal}>
+                <div className="h-screen bg-white">
+                  <div className="flex flex-col items-center justify-center space-y-10">
+                    <h2 className='text-primary text-xl font-medium text-center'>Add a vehicle</h2>
+                    <p className='text-primary text-sm font-normal text-center px-14'>To add a vehicle, enter the VIN or chasis number below</p>
+                  </div>
+                  <div className="mt-14 md:max-w-[468px] mx-auto">
+                    <h1 className='text-start mb-3 text-[#1D2939] font-medium'>VIN / Chasis number</h1>
+                    <div className="border border-[#D0D5DD] rounded-[8px] bg-white mb-5">
+                      <input type="text" className='px-5 py-3 rounded-[8px] focus:border-transparent focus:outline-none' placeholder='Enter 17 digits number' />
+                    </div>
+                    <div className="flex items-center justify-center">
+                      <button className='bg-[#8E44AD] mx-auto px-14 py-3 rounded-lg w-auto text-white font-medium'>Decode VIN</button>
+                    </div>
+                    <div className="mt-5 flex items-center justify-center space-x-2 text-[#8E44AD]">
+                      <AiOutlineQuestionCircle />
+                      <h1 className='text-lg'>Where to find VIN</h1>
+                    </div>
+                  </div>
+                </div>
+              </Modal>
+              <button onClick={handleOpenServicesModal} className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Book Service</button>
+              <Modal isOpen={isServicesModalOpen} onClose={handleCloseServicesModal}>
                 <div className="flex flex-col items-center justify-center space-y-10">
-                  <h2 className='text-primary text-xl font-medium'>What service(s) do you want to book?</h2>
+                  <h2 className='text-primary text-xl font-medium text-center'>What service(s) do you want to book?</h2>
                   <p className='text-primary text-sm font-normal text-center px-14'>Choose the maintenance service(s) you want from below. Select as many as your vehicle requires.</p>
                 </div>
                 <div className="py-14 md:max-w-[468px] mx-auto">
@@ -257,84 +296,48 @@ const maintainance = () => {
                 </tbody>
               </table>
 
-              <div className="bg-white border border-stroke rounded-lg m-5 p-10 shadow-main md:hidden">
-                <div className="mb-5 flex items-center space-x-8">
+              <div className="bg-white border border-stroke rounded-lg m-5 shadow-main md:hidden">
+                <div className="mb-5 flex items-center space-x-5 p-10">
                   <Image src={HondaLogo} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
                   <div className="">
                     <p className='text-primary font-semibold'>Honda</p>
                     <p className='text-secondaryText font-medium text-sm'>JHLRE4859C401526Z</p>
                   </div>
+                  <div className="flex justify-end flex-1">
+                    {isCarDetailsOpen ? <BiChevronDown className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} /> : <BiChevronUp className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} />}
+                  </div>
                 </div>
-                <div className="mb-8">
+                <div className="mb-8 px-10">
                   <h5 className='text-grayTable text-xs mb-2'>Start date</h5>
                   <p className='text-primary text-sm'>N / A</p>
                 </div>
-                <div className="mb-8">
+                <div className="mb-8 px-10">
                   <h5 className='text-grayTable text-xs mb-2'>Completed date</h5>
                   <p className='text-primary text-sm'>N / A</p>
                 </div>
-                <div className="mb-8">
+                <div className="mb-8 px-10">
                   <h5 className='text-grayTable text-xs mb-2'>Plan</h5>
                   <p className='text-primary text-sm'>6-months Plan</p>
                 </div>
-                <div className="mb-8">
+                <div className="mb-8 px-10">
                   <h5 className='text-grayTable text-xs mb-2'>Status</h5>
                   <button className='text-sm text-secondaryText bg-grayBg px-3 py-1 rounded-2xl'>No maintenance</button>
                 </div>
-              </div>
-
-              <div className="bg-white border border-stroke rounded-lg m-5 p-10 shadow-main md:hidden">
-                <div className="mb-5 flex items-center space-x-8">
-                  <Image src={HondaLogo} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
-                  <div className="">
-                    <p className='text-primary font-semibold'>Honda</p>
-                    <p className='text-secondaryText font-medium text-sm'>JHLRE4859C401526Z</p>
+                {isCarDetailsOpen && (
+                  <div className="border-t border-stroke md:hidden p-10">
+                    <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
+                    <div className="flex justify-between space-x-4">
+                      <div className="bg-orangeOverlay py-5 px-6 rounded-full">
+                        <p className='text-orange text-center font-semibold text-4xl'>M</p>
+                      </div>
+                      <div className="px-5">
+                        <p className='text-start text-primary text-base font-normal'>Monic’s Auto Center</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="mb-8">
-                  <h5 className='text-grayTable text-xs mb-2'>Start date</h5>
-                  <p className='text-primary text-sm'>N / A</p>
-                </div>
-                <div className="mb-8">
-                  <h5 className='text-grayTable text-xs mb-2'>Completed date</h5>
-                  <p className='text-primary text-sm'>N / A</p>
-                </div>
-                <div className="mb-8">
-                  <h5 className='text-grayTable text-xs mb-2'>Plan</h5>
-                  <p className='text-primary text-sm'>6-months Plan</p>
-                </div>
-                <div className="mb-8">
-                  <h5 className='text-grayTable text-xs mb-2'>Status</h5>
-                  <button className='text-sm text-orangeText bg-orangeOverlay px-3 py-1 rounded-2xl'>Awaiting drop-off</button>
-                </div>
-              </div>
+                )}
 
-              <div className="bg-white border border-stroke rounded-lg m-5 p-10 shadow-main md:hidden">
-                <div className="mb-5 flex items-center space-x-8">
-                  <Image src={HondaLogo} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
-                  <div className="">
-                    <p className='text-primary font-semibold'>Honda</p>
-                    <p className='text-secondaryText font-medium text-sm'>JHLRE4859C401526Z</p>
-                  </div>
-                </div>
-                <div className="mb-8">
-                  <h5 className='text-grayTable text-xs mb-2'>Start date</h5>
-                  <p className='text-primary text-sm'>N / A</p>
-                </div>
-                <div className="mb-8">
-                  <h5 className='text-grayTable text-xs mb-2'>Completed date</h5>
-                  <p className='text-primary text-sm'>N / A</p>
-                </div>
-                <div className="mb-8">
-                  <h5 className='text-grayTable text-xs mb-2'>Plan</h5>
-                  <p className='text-primary text-sm'>6-months Plan</p>
-                </div>
-                <div className="mb-8">
-                  <h5 className='text-grayTable text-xs mb-2'>Status</h5>
-                  <button className='text-sm text-blue bg-blueOverlay px-3 py-1 rounded-2xl'>Vehicle delivered to owner</button>
-                </div>
               </div>
-
             </div>
           </div>
         </div>
