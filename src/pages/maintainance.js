@@ -297,13 +297,13 @@ const maintainance = () => {
               </table>
 
               <div className="bg-white border border-stroke rounded-lg m-5 shadow-main md:hidden">
-                <div className="mb-5 flex items-center space-x-5 p-10">
+                <div className="mb-5 flex items-center space-x-3 p-10">
                   <Image src={HondaLogo} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
                   <div className="">
                     <p className='text-primary font-semibold'>Honda</p>
                     <p className='text-secondaryText font-medium text-sm'>JHLRE4859C401526Z</p>
                   </div>
-                  <div className="flex justify-end flex-1 px-5">
+                  <div className="flex justify-end flex-1 px-3">
                     {isCarDetailsOpen ? <BiChevronDown className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} /> : <BiChevronUp className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} />}
                   </div>
                 </div>
