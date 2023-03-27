@@ -307,24 +307,24 @@ const maintainance = () => {
                     {isCarDetailsOpen ? <BiChevronDown className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} /> : <BiChevronUp className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} />}
                   </div>
                 </div>
-                <div className="mb-8 px-10">
+                <div className="mb-8 px-7">
                   <h5 className='text-grayTable text-xs mb-2'>Start date</h5>
                   <p className='text-primary text-sm'>N / A</p>
                 </div>
-                <div className="mb-8 px-10">
+                <div className="mb-8 px-7">
                   <h5 className='text-grayTable text-xs mb-2'>Completed date</h5>
                   <p className='text-primary text-sm'>N / A</p>
                 </div>
-                <div className="mb-8 px-10">
+                <div className="mb-8 px-7">
                   <h5 className='text-grayTable text-xs mb-2'>Plan</h5>
                   <p className='text-primary text-sm'>6-months Plan</p>
                 </div>
-                <div className="mb-8 px-10">
+                <div className="mb-8 px-7">
                   <h5 className='text-grayTable text-xs mb-2'>Status</h5>
                   <button className='text-sm text-secondaryText bg-grayBg px-3 py-1 rounded-2xl'>No maintenance</button>
                 </div>
                 {isCarDetailsOpen && (
-                  <div className="border-t border-stroke md:hidden p-10">
+                  <div className="border-t border-stroke md:hidden p-7">
                     <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
                     <div className="flex justify-between space-x-4">
                       <div className="bg-orangeOverlay py-5 px-6 rounded-full">
