@@ -72,7 +72,7 @@ const VehicleDetails = ({carMake, VIN, startDate, completeDate, plan, status, re
                                     <p className='text-secondaryText text-xs font-normal'>{repairPhone}</p>
                                 </div>
                                 <div className="flex items-center space-x-2 mb-4">
-                                    <svg width="10" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <svg width="12" height="12" viewBox="0 0 10 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.99999 0C2.24316 0 0 2.24292 0 4.99999C0 6.34202 0.525398 7.60254 1.47755 8.54735L4.82227 11.9258C4.86914 11.9734 4.9331 12 4.99999 12C5.06688 12 5.13084 11.9734 5.17772 11.9258L8.52098 8.54906C9.47461 7.60254 9.99998 6.34202 9.99998 4.99999C9.99998 2.24292 7.75683 0 4.99999 0ZM4.99999 7.00001C3.89695 7.00001 3 6.1028 3 5.00002C3 3.89721 3.89695 3 4.99999 3C6.10303 3 6.99998 3.89721 6.99998 4.99999C6.99998 6.10277 6.10303 7.00001 4.99999 7.00001Z" fill="#8E44AD" />
                                     </svg>
                                     <p className='text-secondaryText text-xs font-normal'>{repairAddress}</p>

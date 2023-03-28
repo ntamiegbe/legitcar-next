@@ -4,7 +4,7 @@ import HondaLogo from '../../assets/Honda.png'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Sidebar from '@/components/Sidebar';
-import {BsArrowLeftShort} from 'react-icons/bs'
+import { BsArrowLeftShort } from 'react-icons/bs'
 import Link from 'next/link'
 
 const vehiclesData = [
@@ -56,7 +56,7 @@ const VehicleDetailsPage = () => {
                 <Navbar page={"Maintainance"} />
                 <div className="p-5">
                     <Link href="/maintainance">
-                <BsArrowLeftShort className="w-8 h-8 mx-5 text-grayTable"/>
+                        <BsArrowLeftShort className="w-8 h-8 mx-5 text-grayTable" />
                     </Link>
                     <VehicleDetails
                         key={vehicle.id}
@@ -72,10 +72,10 @@ const VehicleDetailsPage = () => {
                         repairAddress={vehicle.repairAddress}
                         repairs={vehicle.repairs}
                     />
-                    </div>
-                    </div>
-                    </div>
-                    )
+                </div>
+            </div>
+        </div>
+    )
 }
 
-                    export default VehicleDetailsPage
+export default VehicleDetailsPage
