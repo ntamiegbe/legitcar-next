@@ -29,7 +29,7 @@ const vehiclesData = [
         vehicleImage: HondaLogo,
         startDate: "N / A",
         completeDate: "N / A",
-        plan: "6-months Plan",
+        plan: "16-months Plan",
         status: "No maintenance",
         repairShop: "Monic’s Auto Center",
         repairPhone: "0908 802 1497",
@@ -55,23 +55,26 @@ const VehicleDetailsPage = () => {
             <div className="flex-1 min-h-screen bg-grayBg">
                 <Navbar page={"Maintainance"} />
                 <div className="p-5">
-                    <Link href="/maintainance">
-                        <BsArrowLeftShort className="w-8 h-8 mx-5 text-grayTable" />
+                    <Link href="/maintainance" className='flex items-center'>
+                        <BsArrowLeftShort className="w-8 h-8 mx-2 text-grayTable" />
+                        <span className='hidden lg:inline text-secondaryText'>Back</span>
                     </Link>
-                    <VehicleDetails
-                        key={vehicle.id}
-                        carMake={vehicle.carMake}
-                        vehicleImage={vehicle.vehicleImage}
-                        VIN={vehicle.VIN}
-                        startDate={vehicle.startDate}
-                        completeDate={vehicle.completeDate}
-                        plan={vehicle.plan}
-                        status={vehicle.status}
-                        repairShop={vehicle.repairShop}
-                        repairPhone={vehicle.repairPhone}
-                        repairAddress={vehicle.repairAddress}
-                        repairs={vehicle.repairs}
-                    />
+                    {vehiclesData.map((vehicle) => (
+                        <VehicleDetails
+                            key={vehicle.id}
+                            carMake={vehicle.carMake}
+                            vehicleImage={vehicle.vehicleImage}
+                            VIN={vehicle.VIN}
+                            startDate={vehicle.startDate}
+                            completeDate={vehicle.completeDate}
+                            plan={vehicle.plan}
+                            status={vehicle.status}
+                            repairShop={vehicle.repairShop}
+                            repairPhone={vehicle.repairPhone}
+                            repairAddress={vehicle.repairAddress}
+                            repairs={vehicle.repairs}
+                        />
+                    ))}
                 </div>
             </div>
         </div>

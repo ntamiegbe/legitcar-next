@@ -41,7 +41,7 @@ const vehiclesData = [
     repairAddress: "250, Agbaoku Street, Opebi, Ikeja, Lagos, Nigeria Lagos, 100242, Ikeja",
     repairs: "Vehicle brake repair, Vehicle engine diagnostic, Oil change, Gearbox repair, Battery replacement, Fuel system",
   },
-]
+  ]
 
 const maintainance = () => {
 
@@ -99,7 +99,7 @@ const maintainance = () => {
         <Sidebar />
         <div className="flex-1 min-h-screen bg-grayBg">
           <Navbar page={"Maintainance"} />
-          <div className="p-5">
+          <div className="p-5 max-w-6xl mx-auto">
             <div className="flex items-center justify-center md:justify-end mt-4 mb-8 space-x-5">
               <button onClick={handleVehicleOpenModal} className='bg-white border border-stroke py-4 px-6 rounded-lg text-secondaryText text-base cursor-pointer'>Add a vehicle</button>
               <Modal isOpen={isVehicleModalOpen} onClose={handleVehicleCloseModal}>
@@ -143,7 +143,6 @@ const maintainance = () => {
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path fill-rule="evenodd" clip-rule="evenodd" d="M13.7422 3.76606C14.0221 4.01101 14.0475 4.43773 13.7985 4.71409L6.78928 12.4939C6.53898 12.7717 6.10923 12.7894 5.83699 12.5331L1.78097 8.71475C1.52802 8.47661 1.50381 8.07981 1.72083 7.80855C1.96029 7.50921 2.40623 7.46801 2.69123 7.72435L5.83815 10.5549C6.11163 10.8009 6.53268 10.7789 6.77907 10.5058L12.8081 3.82121C13.052 3.5507 13.4681 3.52618 13.7422 3.76606Z" fill="#8E44AD" />
                             </svg>
-
                           )}
                           <p>{service.name}</p>
                         </div>
@@ -156,9 +155,9 @@ const maintainance = () => {
                 </div>
               </Modal>
             </div>
-            <div className="max-w-5xl md:mx-auto bg-white border border-dashboardBorders rounded-lg opacity-[90%] mb-20">
+            <div className=" bg-white md:bg-transparent md:border-none border border-dashboardBorders rounded-lg opacity-[90%] mb-20">
 
-              <table className='w-full hidden md:table pb-14'>
+              <table className='w-full hidden pb-14'>
                 <thead>
                   <tr className="bg-grayBg">
                     <th className="px-6 py-3 text-start text-grayTable text-xs font-medium">VIN / Chasis number</th>
@@ -323,47 +322,47 @@ const maintainance = () => {
                   </tr>
                 </tbody>
               </table>
-
-              {vehiclesData.length > 1 ? (
-                // conditional rendering for when vehiclesData has more than one element
-                vehiclesData.map((vehicle) => (
-                  <VehicleCard
-                    key={vehicle.id}
-                    id={vehicle.id}
-                    carMake={vehicle.carMake}
-                    vehicleImage={vehicle.vehicleImage}
-                    VIN={vehicle.VIN}
-                    startDate={vehicle.startDate}
-                    completeDate={vehicle.completeDate}
-                    plan={vehicle.plan}
-                    status={vehicle.status}
-                    repairShop={vehicle.repairShop}
-                    repairPhone={vehicle.repairPhone}
-                    repairAddress={vehicle.repairAddress}
-                    repairs={vehicle.repairs}
-                  />
-                ))
-                
-              ) : (
-                // conditional rendering for when vehiclesData has one or zero elements
-                vehiclesData.map((vehicle) => (
-                  <VehicleDetails
-                    key={vehicle.id}
-                    carMake={vehicle.carMake}
-                    vehicleImage={vehicle.vehicleImage}
-                    VIN={vehicle.VIN}
-                    startDate={vehicle.startDate}
-                    completeDate={vehicle.completeDate}
-                    plan={vehicle.plan}
-                    status={vehicle.status}
-                    repairShop={vehicle.repairShop}
-                    repairPhone={vehicle.repairPhone}
-                    repairAddress={vehicle.repairAddress}
-                    repairs={vehicle.repairs}
-                  />
-                ))
-              )}
-
+              
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7'>
+                {/* Conditional rendering for when vehiclesData has more than one element */}
+                {vehiclesData.length > 1 ? (
+                  vehiclesData.map((vehicle) => (
+                    <VehicleCard
+                      key={vehicle.id}
+                      id={vehicle.id}
+                      carMake={vehicle.carMake}
+                      vehicleImage={vehicle.vehicleImage}
+                      VIN={vehicle.VIN}
+                      startDate={vehicle.startDate}
+                      completeDate={vehicle.completeDate}
+                      plan={vehicle.plan}
+                      status={vehicle.status}
+                      repairShop={vehicle.repairShop}
+                      repairPhone={vehicle.repairPhone}
+                      repairAddress={vehicle.repairAddress}
+                      repairs={vehicle.repairs}
+                    />
+                  ))
+                ) : (
+                  /* Conditional rendering for when vehiclesData has one or zero elements */
+                  vehiclesData.map((vehicle) => (
+                    <VehicleDetails
+                      key={vehicle.id}
+                      carMake={vehicle.carMake}
+                      vehicleImage={vehicle.vehicleImage}
+                      VIN={vehicle.VIN}
+                      startDate={vehicle.startDate}
+                      completeDate={vehicle.completeDate}
+                      plan={vehicle.plan}
+                      status={vehicle.status}
+                      repairShop={vehicle.repairShop}
+                      repairPhone={vehicle.repairPhone}
+                      repairAddress={vehicle.repairAddress}
+                      repairs={vehicle.repairs}
+                    />
+                  ))
+                )}
+              </div>
             </div>
           </div>
         </div>
