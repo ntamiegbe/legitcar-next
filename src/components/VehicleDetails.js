@@ -27,15 +27,15 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
             title: "Pending confirmation",
             date: "Thu 25th Apr, 2022 05:31PM",
             completed: true,
-            current: true
+            current: false
         },
         {
             id: 3,
             title: "Awaiting drop-off",
             date: "Thu 25th Apr, 2022 05:31PM",
-            completed: false,
             description: "Maintenance confirmed. Drop-off at the closest garage to you.",
-            current: false
+            completed: false,
+            current: true
         },
         {
             id: 4,
@@ -65,16 +65,12 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
             completed: false,
             current: false
         },
-    ];
-
-    const handleClick = (stepId) => {
-        setCurrentStep(stepId);
-    };
+    ]
 
     return (
         <div className="flex flex-col">
             <div className="bg-white border border-stroke rounded-lg m-5 shadow-main md:shadow-none md:relative">
-                <div className="lg:flex items-center space-x-10">
+                <div className="lg:flex items-center justify-between lg:mr-14">
                     <div className="mb-5 flex items-center p-7">
                         <Image src={vehicleImage} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
                         <div className="px-2">
@@ -85,19 +81,19 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                             {isCarDetailsOpen ? <BiChevronUp className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} /> : <BiChevronDown className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} />}
                         </div>
                     </div>
-                    <div className="mb-8 lg:mb-0 px-3">
+                    <div className="mb-8 lg:mb-0 px-7">
                         <h5 className='text-grayTable text-xs mb-2 lg:mb-0'>Start date</h5>
                         <p className='text-primary text-sm'>{startDate}</p>
                     </div>
-                    <div className="mb-8 lg:mb-0 px-3">
+                    <div className="mb-8 lg:mb-0 px-7">
                         <h5 className='text-grayTable text-xs mb-2 lg:mb-0'>Completed date</h5>
                         <p className='text-primary text-sm'>{completeDate}</p>
                     </div>
-                    <div className="mb-8 lg:mb-0 px-3">
+                    <div className="mb-8 lg:mb-0 px-7">
                         <h5 className='text-grayTable text-xs mb-2 lg:mb-0'>Plan</h5>
                         <p className='text-primary text-sm'>{plan}</p>
                     </div>
-                    <div className="mb-8 lg:mb-0 px-3">
+                    <div className="mb-8 lg:mb-0 px-7">
                         <h5 className='text-grayTable text-xs mb-2 lg:mb-0'>Status</h5>
                         <button className='text-sm text-secondaryText bg-grayBg px-3 py-1 rounded-2xl'>{status}</button>
                     </div>
@@ -105,7 +101,7 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                 {isCarDetailsOpen && (
                     <div className='lg:flex flex-row-reverse'>
                         <div className="m-5 mb-20 border border-stroke rounded-lg">
-                            <div className="border-t border-stroke p-7">
+                            <div className="border-t border-stroke p-7 lg:border-t-0">
                                 <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
                                 <div className="flex justify-between space-x-3 lg:justify-start items-start">
                                     <div className="bg-orangeOverlay rounded-full px-4 py-3 flex items-center justify-center">
@@ -163,26 +159,26 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                                         {maintenance.completed ? (
                                             <div className='flex flex-col items-center space-y-1 mr-5 my-1'>
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="10" cy="10" r="9.25" fill="white" stroke="#8E44AD" stroke-width="1.5" />
-                                                    <path d="M8.49956 12.379L15.3936 5.48425L16.4548 6.54475L8.49956 14.5L3.72656 9.727L4.78706 8.6665L8.49956 12.379Z" fill="#8E44AD" />
+                                                    <circle cx="10" cy="10" r="9.25" fill="white" stroke="#C6A1D6" stroke-width="1.5" />
+                                                    <path d="M8.49956 12.379L15.3936 5.48425L16.4548 6.54475L8.49956 14.5L3.72656 9.727L4.78706 8.6665L8.49956 12.379Z" fill="#C6A1D6" />
                                                 </svg>
                                                 <svg width="2" height="36" viewBox="0 0 2 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect width="2" height="36" fill="#8E44AD" />
+                                                    <rect width="2" height="36" fill="#C6A1D6" />
                                                 </svg>
                                             </div>
                                         ) : (
                                             <div className='flex flex-col items-center space-y-1 mr-5 my-1'>
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <circle cx="10" cy="10" r="9.25" fill="white" stroke="#BFC8D8" stroke-width="1.5" />
-                                                    <circle cx="10" cy="10" r="4" fill="#BFC8D8" />
+                                                        <circle cx="10" cy="10" r="9.25" fill="white" stroke={`${maintenance.current ? "#8E44AD" : "#B9C0CE"}`} stroke-width="1.5" />
+                                                        <circle cx="10" cy="10" r="4" fill={`${maintenance.current ? "#8E44AD" : "#B9C0CE"}`} />
                                                 </svg>
                                                 <svg width="2" height="36" viewBox="0 0 2 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                    <rect width="2" height="36" fill="#B9C0CE" />
+                                                        <rect width="2" height="36" fill={`${maintenance.current ? "#8E44AD" : "#B9C0CE"}`} />
                                                 </svg>
                                             </div>
                                         )}
                                         <div className="">
-                                            <button className="text-xs font-medium text-white uppercase bg-brand py-[2px] px-[6px] rounded-sm">{maintenance.title}</button>
+                                            <button className={`text-xs font-medium text-white uppercase ${maintenance.current && "bg-brand opacity-100"} ${maintenance.completed ? "bg-brand" : "bg-[#B9C0CE]"} ${maintenance.completed ? "opacity-50" : "opacity-100"} py-[2px] px-[6px] rounded-sm`}>{maintenance.title}</button>
                                             <p className="text-sm text-primary font-normal py-1">
                                                 {maintenance.date}
                                             </p>

@@ -14,7 +14,7 @@ const Modal = ({ isOpen, onClose, children }) => {
     }
 
     const modalContent = isOpen ? (
-        <div className="fixed z-50 top-0 left-0 h-screen bg-white mx-auto w-full">
+        <div className="fixed z-50 top-0 left-0 h-full bg-white mx-auto w-full">
             <div className="p-4">
                 <div className="flex items-center justify-end mt-4 mb-8">
                     <button className="p-1 ml-auto" onClick={handleCloseClick}>
