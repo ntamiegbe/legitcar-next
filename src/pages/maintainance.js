@@ -14,20 +14,20 @@ import VehicleCard from '@/components/VehicleCard';
 import NoVehicle from '@/components/NoVehicle';
 
 const vehiclesData = [
-  // {
-  //   id: 1,
-  //   carMake: 'Honda',
-  //   VIN: "JHLRE4859C401526Z",
-  //   vehicleImage: HondaLogo,
-  //   startDate: "N / A",
-  //   completeDate: "N / A",
-  //   plan: "6-months Plan",
-  //   status: "No maintenance",
-  //   repairShop: "Monic’s Auto Center",
-  //   repairPhone: "0908 802 1497",
-  //   repairAddress: "2, Agbaoku Street, Opebi, Ikeja, Lagos, Nigeria Lagos, 100242, Ikeja",
-  //   repairs: "Vehicle brake repair, Vehicle engine diagnostic, Oil change, Gearbox repair, Battery replacement, Fuel system",
-  // },
+  {
+    id: 1,
+    carMake: 'Honda',
+    VIN: "JHLRE4859C401526Z",
+    vehicleImage: HondaLogo,
+    startDate: "N / A",
+    completeDate: "N / A",
+    plan: "6-months Plan",
+    status: "No maintenance",
+    repairShop: "Monic’s Auto Center",
+    repairPhone: "0908 802 1497",
+    repairAddress: "2, Agbaoku Street, Opebi, Ikeja, Lagos, Nigeria Lagos, 100242, Ikeja",
+    repairs: "Vehicle brake repair, Vehicle engine diagnostic, Oil change, Gearbox repair, Battery replacement, Fuel system",
+  },
   // {
   //   id: 2,
   //   carMake: 'Honda',
