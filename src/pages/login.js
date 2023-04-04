@@ -133,7 +133,7 @@ const login = () => {
                             Sign in
                         </button>
                     </form>
-
+                    <p className='text-secondaryText text-base font-medium text-center'>Forgot password?  <a href='/forgotPassword' className='text-brand ml-1'> Reset here</a></p>
                 </div>
             </div>
         </>
