@@ -17,7 +17,7 @@ const forgotPassword = () => {
                     <p className='font-bold text-2xl text-[#8E44AD]'>r</p>
                 </div>
             </nav>
-            <div className="flex flex-col justify-center items-center mt-20 max-w-lg mx-auto">
+            <div className="flex flex-col justify-center items-center mt-20 max-w-lg px-10 mx-auto">
                 <div className="flex items-center space-x-3">
                     <div className="bg-overlay p-3 rounded-lg">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
