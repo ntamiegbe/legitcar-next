@@ -10,7 +10,7 @@ const DropdownMenu = () => {
 
     return (
         <div className="relative">
-            <button className="flex items-center space-x-3 px-14 py-2 text-sm font-medium text-gray-700 bg-white rounded-md focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
+            <button className="flex items-center space-x-3 px-10 py-2 text-sm font-medium text-gray-700 bg-white rounded-md focus:outline-none" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                 <Image src={Logo} alt='profile image' className='object-contain rounded-full w-10 h-10' />
                 <BiChevronDown className='hidden md:inline-flex h-5 w-5 text-icons' />
             </button>
