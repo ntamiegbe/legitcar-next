@@ -82,7 +82,7 @@ const signUp = () => {
               <p className='font-bold text-xl text-[#8E44AD]'>r</p>
             </div>
             <div className="flex items-center space-x-6">
-              <a href='/signUp' className='text-brand text-base font-medium md:hidden'>Create account</a>
+              <a href='/login' className='text-brand text-base font-medium md:hidden'>Sign in</a>
               <p className='text-secondaryText text-base font-medium hidden md:inline-flex'>Already have an account? <a href='/login' className='text-brand ml-1'> Sign in</a></p>
             </div>
           </div>
