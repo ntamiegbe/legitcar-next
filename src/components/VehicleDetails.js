@@ -103,13 +103,13 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                 {isCarDetailsOpen && (
                     <div className='lg:flex flex-row-reverse'>
                         <div className="m-5 mb-20 border border-stroke rounded-lg">
-                            <div className="border-t border-stroke p-7 lg:border-t-0">
+                            <div className="p-5">
                                 <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
                                 <div className="flex justify-between space-x-2 lg:justify-start items-start">
                                     <div className="bg-orangeOverlay rounded-full px-4 py-3 flex items-center justify-center">
                                         <p className='text-orange text-center font-semibold text-4xl'>M</p>
                                     </div>
-                                    <div className="px-4">
+                                    <div className="px-3">
                                         <p className='text-start text-primary text-base font-normal mb-5'>{repairShop}</p>
                                         <div className="flex items-center space-x-2 mb-4">
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
