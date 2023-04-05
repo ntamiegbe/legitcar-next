@@ -71,10 +71,10 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
         <div className="flex flex-col">
             <div className="bg-white border border-stroke rounded-lg m-5 shadow-main md:shadow-none md:relative">
                 <div className="lg:flex items-center justify-between lg:mr-14">
-                    <div className="mb-5 flex items-center justify-between py-7 px-5">
+                    <div className="mb-5 flex items-center justify-between py-7 px-3">
                         <div className="flex items-center justify-between">
                             <Image src={vehicleImage} alt="Car logo" className='w-20 h-20 p-4 bg-grayBg rounded-full' />
-                            <div className="px-2">
+                            <div className="px-3">
                                 <p className='text-primary font-semibold'>{carMake}</p>
                                 <p className='text-secondaryText font-medium text-sm'>{VIN}</p>
                             </div>
@@ -105,7 +105,7 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                         <div className="m-5 mb-20 border border-stroke rounded-lg">
                             <div className="border-t border-stroke p-7 lg:border-t-0">
                                 <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
-                                <div className="flex justify-between space-x-2 lg:justify-start items-start">
+                                {/* <div className="flex justify-between space-x-2 lg:justify-start items-start">
                                     <div className="bg-orangeOverlay rounded-full px-4 py-3 flex items-center justify-center">
                                         <p className='text-orange text-center font-semibold text-4xl'>M</p>
                                     </div>
@@ -138,7 +138,7 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                                             </div>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </div>
 
                             <div className="border-t border-stroke p-7">
