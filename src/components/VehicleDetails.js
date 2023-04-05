@@ -102,7 +102,7 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                 </div>
                 {isCarDetailsOpen && (
                     <div className='lg:flex flex-row-reverse'>
-                        <div className="m-5 mb-20 border border-stroke rounded-lg">
+                        {/* <div className="m-5 mb-20 border border-stroke rounded-lg">
                             <div className="border-t border-stroke p-7 lg:border-t-0">
                                 <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
                                 <div className="flex justify-between lg:justify-start items-start">
@@ -148,7 +148,7 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                                 </div>
                                 <p className='text-primary text-sm'>{repairs}</p>
                             </div>
-                        </div>
+                        </div> */}
 
                         <div className="border-t border-stroke md:border-none px-7 py-5 lg:flex-1">
                             <h2 className='text-primary font-semibold text-base mb-4'>Maintenance history</h2>
