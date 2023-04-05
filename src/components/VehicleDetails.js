@@ -79,7 +79,7 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                                 <p className='text-secondaryText font-medium text-sm'>{VIN}</p>
                             </div>
                         </div>
-                        <div className="flex justify-end flex-1 px-3 md:absolute top-0 right-0 m-5">
+                        <div className="flex justify-end px-3 md:absolute top-0 right-0 m-5">
                             {isCarDetailsOpen ? <BiChevronUp className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} /> : <BiChevronDown className='h-8 w-8 text-brand cursor-pointer' onClick={handleOpenCarDetailsModal} />}
                         </div>
                     </div>
@@ -102,14 +102,14 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                 </div>
                 {isCarDetailsOpen && (
                     <div className='lg:flex flex-row-reverse'>
-                        {/* <div className="m-5 mb-20 border border-stroke rounded-lg">
+                        <div className="m-5 mb-20 border border-stroke rounded-lg">
                             <div className="border-t border-stroke p-7 lg:border-t-0">
                                 <h2 className='text-grayTable text-xs font-semibold mb-6'>VEHICLE REPAIR SHOP</h2>
-                                <div className="flex justify-between lg:justify-start items-start">
+                                <div className="flex justify-between space-x-2 lg:justify-start items-start">
                                     <div className="bg-orangeOverlay rounded-full px-4 py-3 flex items-center justify-center">
                                         <p className='text-orange text-center font-semibold text-4xl'>M</p>
                                     </div>
-                                    <div className="px-4 flex-1">
+                                    <div className="w-[24rem] lg:w-auto px-4">
                                         <p className='text-start text-primary text-base font-normal mb-5'>{repairShop}</p>
                                         <div className="flex items-center space-x-2 mb-4">
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -148,15 +148,12 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                                 </div>
                                 <p className='text-primary text-sm'>{repairs}</p>
                             </div>
-                        </div> */}
+                        </div>
 
                         <div className="border-t border-stroke md:border-none px-7 py-5 lg:flex-1">
                             <h2 className='text-primary font-semibold text-base mb-4'>Maintenance history</h2>
                             {maintenanceData.map((maintenance) => (
-                                <div
-                                    key={maintenance.id}
-                                    className="p-1"
-                                >
+                                <div key={maintenance.id} className="p-1">
                                     <div className="flex items-center">
                                         {maintenance.completed ? (
                                             <div className='flex flex-col items-center space-y-1 mr-5 my-1'>
