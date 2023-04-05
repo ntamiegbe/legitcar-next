@@ -123,16 +123,16 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                                             </svg>
                                             <p className='text-secondaryText px-3 text-xs font-normal'>{repairAddress}</p>
                                         </div>
-                                        <div className="flex items-center space-x-3 mb-4">
-                                            <div className="border border-stroke py-2 px-4 rounded-lg cursor-pointer flex items-center justify-between">
+                                        <div className="flex items-center space-x-2 mb-4">
+                                            <div className="border border-stroke py-2 px-3 rounded-lg cursor-pointer flex items-center justify-between">
                                                 <FaGlobeAfrica className='text-brand mr-1' />
                                                 <span className='hidden lg:inline text-secondaryText text-xs font-normal'> Website</span>
                                             </div>
-                                            <div className="border border-stroke py-2 px-4 rounded-lg cursor-pointer flex items-center justify-between">
+                                            <div className="border border-stroke py-2 px-3 rounded-lg cursor-pointer flex items-center justify-between">
                                                 <MdDirections className='text-brand mr-1' />
                                                 <span className='hidden lg:inline text-secondaryText text-xs font-normal'> Get directions</span>
                                             </div>
-                                            <div className="border border-stroke py-2 px-4 rounded-lg cursor-pointer flex items-center justify-between">
+                                            <div className="border border-stroke py-2 px-3 rounded-lg cursor-pointer flex items-center justify-between">
                                                 <BsShareFill className='text-brand mr-1' />
                                                 <span className='hidden lg:inline text-secondaryText text-xs font-normal'> Share</span>
                                             </div>
