@@ -109,8 +109,8 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                                     <div className="bg-orangeOverlay rounded-full px-4 py-3 flex items-center justify-center">
                                         <p className='text-orange text-center font-semibold text-4xl'>M</p>
                                     </div>
-                                    <div className="px-3">
-                                        {/* <p className='text-start text-primary text-base font-normal mb-5'>{repairShop}</p>
+                                    <div className="flex-1 px-3">
+                                        <p className='text-start text-primary text-base font-normal mb-5'>{repairShop}</p>
                                         <div className="flex items-center mb-4">
                                             <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M11.3333 8.33334C10.5033 8.33334 9.7 8.2 8.95334 7.95334C8.72334 7.88 8.46 7.93334 8.27669 8.11669L6.81003 9.58669C4.92003 8.62669 3.37669 7.08334 2.41669 5.19669L3.88334 3.72334C4.06669 3.54 4.12 3.27669 4.04669 3.04669C3.80003 2.30003 3.66669 1.49669 3.66669 0.666687C3.66666 0.296656 3.37 0 3 0H0.666656C0.3 0 0 0.296656 0 0.666656C0 6.92666 5.07334 12 11.3333 12C11.7033 12 12 11.7033 12 11.3333V9C12 8.63 11.7033 8.33334 11.3333 8.33334Z" fill="#8E44AD" />
@@ -122,8 +122,8 @@ const VehicleDetails = ({ carMake, VIN, startDate, completeDate, plan, status, r
                                                 <path d="M4.99999 0C2.24316 0 0 2.24292 0 4.99999C0 6.34202 0.525398 7.60254 1.47755 8.54735L4.82227 11.9258C4.86914 11.9734 4.9331 12 4.99999 12C5.06688 12 5.13084 11.9734 5.17772 11.9258L8.52098 8.54906C9.47461 7.60254 9.99998 6.34202 9.99998 4.99999C9.99998 2.24292 7.75683 0 4.99999 0ZM4.99999 7.00001C3.89695 7.00001 3 6.1028 3 5.00002C3 3.89721 3.89695 3 4.99999 3C6.10303 3 6.99998 3.89721 6.99998 4.99999C6.99998 6.10277 6.10303 7.00001 4.99999 7.00001Z" fill="#8E44AD" />
                                             </svg>
                                             <p className='text-secondaryText px-3 text-xs font-normal'>{repairAddress}</p>
-                                        </div> 
-                                        <div className="flex items-center space-x-3 mb-4">
+                                        </div>
+                                        {/*  <div className="flex items-center space-x-3 mb-4">
                                             <div className="border border-stroke py-2 px-4 rounded-lg cursor-pointer flex items-center justify-between">
                                                 <FaGlobeAfrica className='text-brand mr-1' />
                                                 <span className='hidden lg:inline text-secondaryText text-xs font-normal'> Website</span>
