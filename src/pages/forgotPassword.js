@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { BiArrowBack } from 'react-icons/bi'
 
 const forgotPassword = () => {
@@ -41,10 +42,10 @@ const forgotPassword = () => {
                     />
                 </div>
                 <button className='my-4 bg-brand py-4 w-full px-6 rounded-lg text-white text-base'>Reset password</button>
-                <div className="flex items-center space-x-3 mt-8">
+                <Link href="/login" className="flex items-center space-x-3 mt-8">
                     <BiArrowBack className='text-icons'/>
                     <p className='font-medium text-secondaryText'>Back to log in</p>
-                </div>
+                </Link>
             </div>
         </div>
     )
