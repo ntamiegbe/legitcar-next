@@ -12,6 +12,7 @@ import vehicles from './vehicles';
 import HondaLogo from '../assets/Honda.png'
 import VehicleCard from '@/components/VehicleCard';
 import NoVehicle from '@/components/NoVehicle';
+import CarDetails from '@/components/modals/CarDetails';
 
 const vehiclesData = [
   {
@@ -49,6 +50,7 @@ const maintainance = () => {
   const [isServicesModalOpen, setIsServicesModalOpen] = useState(false)
   // Remeber to set the initial state back to false
   const [isVehicleModalOpen, setIsVehicleModalOpen] = useState(false)
+  const [isVehicleDetailsModalOpen, setIsVehicleDetailsModalOpen] = useState(false)
 
 
   const handleOpenServicesModal = () => {
@@ -66,6 +68,15 @@ const maintainance = () => {
   const handleVehicleCloseModal = () => {
     setIsVehicleModalOpen(false)
   }
+
+  const handleVehicleDetailsOpenModal = () => {
+    setIsVehicleDetailsModalOpen(true)
+  }
+
+  const handleVehicleDetailsCloseModal = () => {
+    setIsVehicleDetailsModalOpen(false)
+  }
+
 
   const services = [
     { id: 1, name: 'Oil change' },
@@ -103,30 +114,34 @@ const maintainance = () => {
           {vehiclesData.length === 0 ? (
             <NoVehicle />
           ) : (
-            <div className="p-5 max-w-7xl mx-auto">
+            <div className="px-5 max-w-7xl mx-auto">
               <div className="flex items-center justify-center md:justify-end mx-6 mt-4 mb-8 space-x-5">
                 <button onClick={handleVehicleOpenModal} className='bg-white border border-stroke py-4 px-6 rounded-lg text-secondaryText text-base cursor-pointer'>Add a vehicle</button>
                 <Modal isOpen={isVehicleModalOpen} onClose={handleVehicleCloseModal}>
-                  <div className="h-screen bg-white">
+                  <div className="max-h-screen bg-white">
                     <div className="flex flex-col items-center justify-center space-y-10">
                       <h2 className='text-primary text-xl font-medium text-center'>Add a vehicle</h2>
                       <p className='text-primary text-sm font-normal text-center px-14'>To add a vehicle, enter the VIN or chasis number below</p>
                     </div>
                     <div className="mt-14 md:max-w-[468px] mx-auto">
-                      <h1 className='text-start mb-3 text-[#1D2939] font-medium'>VIN / Chasis number</h1>
-                      <div className="border border-[#D0D5DD] rounded-[8px] bg-white mb-5">
-                        <input type="text" className='px-5 py-3 rounded-[8px] focus:border-transparent focus:outline-none' placeholder='Enter 17 digits number' />
+                      <h1 className='text-start mb-3 text-primary font-medium'>VIN / Chasis number</h1>
+                      <div className="border border-stroke rounded-lg bg-white mb-5">
+                        <input type="text" className='px-5 py-3 rounded-lg focus:border-transparent focus:outline-none w-full' placeholder='Enter 17 digits number' />
                       </div>
                       <div className="flex items-center justify-center">
-                        <button className='bg-[#8E44AD] mx-auto px-14 py-3 rounded-lg w-auto text-white font-medium'>Decode VIN</button>
+                        <button onClick={handleVehicleDetailsOpenModal} className='bg-brand mx-auto px-14 py-3 rounded-lg w-auto text-white font-medium'>Decode VIN</button>
                       </div>
-                      <div className="mt-5 flex items-center justify-center space-x-2 text-[#8E44AD]">
+                      <div className="mt-5 flex items-center justify-center space-x-2 text-brand">
                         <AiOutlineQuestionCircle />
                         <h1 className='text-lg'>Where to find VIN</h1>
                       </div>
                     </div>
                   </div>
                 </Modal>
+                <Modal isOpen={isVehicleDetailsModalOpen} onClose={handleVehicleDetailsCloseModal}>
+                  <CarDetails />
+                </Modal>
+
                 <button onClick={handleOpenServicesModal} className='bg-brand py-4 px-6 rounded-lg text-white text-base cursor-pointer'>Book Service</button>
                 <Modal isOpen={isServicesModalOpen} onClose={handleCloseServicesModal}>
                   <div className="flex flex-col items-center justify-center space-y-10">
@@ -154,7 +169,7 @@ const maintainance = () => {
                       ))}
                     </div>
                     <div className="flex items-center justify-center mt-10">
-                      <Link className='bg-[#8E44AD] px-14 py-3 rounded-lg w-auto text-white font-medium' href="/kudos">Submit</Link>
+                      <Link className='bg-brand px-14 py-3 rounded-lg w-auto text-white font-medium' href="/kudos">Submit</Link>
                     </div>
                   </div>
                 </Modal>
@@ -373,10 +388,10 @@ const maintainance = () => {
                   )}
                 </div>
               </div>
-            </div >
+            </div>
           )}
-        </div >
-      </div >
+        </div>
+      </div>
       <Footer />
     </>
   )
