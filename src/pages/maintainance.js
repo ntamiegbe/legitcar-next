@@ -342,7 +342,6 @@ const maintainance = () => {
                   </tbody>
                 </table>
 
-
                 <div className={`${vehiclesData.length > 1 ? 'grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7' : 'd-block'}`}>
                   {/* Conditional rendering for when vehiclesData has more than one element */}
                   {vehiclesData.length > 1 ? (
